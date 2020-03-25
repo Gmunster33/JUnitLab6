@@ -4,6 +4,8 @@ import android.graphics.Point;
 
 import java.util.Random;
 
+import static java.lang.Math.round;
+
 /**
  * This class is designed to perform operations on two points in 2D space
  */
@@ -52,7 +54,7 @@ public class TwoPoints {
         int xDiff = points[0].x - points[1].x;
         int yDiff = points[0].y - points[1].y;
         result = Math.sqrt(xDiff*xDiff + yDiff*yDiff);
-        return result; //TODO must round
+        return (double) round(result); //must round
     }
 
     /** calculates the slope of a line passing through the two points
@@ -67,7 +69,7 @@ public class TwoPoints {
         int xDiff = points[0].x - points[1].x;
         int yDiff = points[0].y - points[1].y;
 
-        result = xDiff / yDiff; //TODO should be rise over run
+        result = yDiff/xDiff; //should be rise over run
         return result;
     }
 
