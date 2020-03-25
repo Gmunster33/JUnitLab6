@@ -52,7 +52,7 @@ public class TwoPoints {
         int xDiff = points[0].x - points[1].x;
         int yDiff = points[0].y - points[1].y;
         result = Math.sqrt(xDiff*xDiff + yDiff*yDiff);
-        return result;
+        return result; //TODO must round
     }
 
     /** calculates the slope of a line passing through the two points
